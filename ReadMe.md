@@ -6,7 +6,7 @@
         src="/.github/assets/light_theme_banner.png">
 </picture>
 
-#SquachWare Custom Firmware
+# SquachWare Community Firmware
 This is just a placeholder while we get things started!!
 
 # Flipper Zero Firmware
