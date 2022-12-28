@@ -6,6 +6,9 @@
         src="/.github/assets/light_theme_banner.png">
 </picture>
 
+#SquachWare Custom Firmware
+This is just a placeholder while we get things started!!
+
 # Flipper Zero Firmware
 
 - [Flipper Zero Official Website](https://flipperzero.one). A simple way to explain to your friends what the Flipper Zero can do
