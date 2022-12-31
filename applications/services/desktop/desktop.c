@@ -230,7 +230,7 @@ Desktop* desktop_alloc() {
     view_port_draw_callback_set(
         desktop->lock_icon_viewport, desktop_lock_icon_draw_callback, desktop);
     view_port_enabled_set(desktop->lock_icon_viewport, false);
-    gui_add_view_port(desktop->gui, desktop->lock_icon_viewport, GuiLayerStatusBarRight);
+    gui_add_view_port(desktop->gui, desktop->lock_icon_viewport, GuiLayerStatusBarLeft);
 
     // Dummy mode icon
     desktop->dummy_mode_icon_viewport = view_port_alloc();
@@ -238,7 +238,7 @@ Desktop* desktop_alloc() {
     view_port_draw_callback_set(
         desktop->dummy_mode_icon_viewport, desktop_dummy_mode_icon_draw_callback, desktop);
     view_port_enabled_set(desktop->dummy_mode_icon_viewport, false);
-    gui_add_view_port(desktop->gui, desktop->dummy_mode_icon_viewport, GuiLayerStatusBarRight);
+    gui_add_view_port(desktop->gui, desktop->dummy_mode_icon_viewport, GuiLayerStatusBarLeft);
 
     // Special case: autostart application is already running
     desktop->loader = furi_record_open(RECORD_LOADER);
