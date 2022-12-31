@@ -9,6 +9,9 @@
 # SquachWare Community Firmware
 This is just a placeholder while we get things started!!
 
+FULL DOCUMENTATION INCLUDING LINKS TO ALL AUTHORS WILL BE DONE SHORTLY.
+Right now I'm just getting the basics all sorted out!
+
 # Flipper Zero Firmware
 
 - [Flipper Zero Official Website](https://flipperzero.one). A simple way to explain to your friends what the Flipper Zero can do
