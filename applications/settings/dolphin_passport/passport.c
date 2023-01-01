@@ -43,13 +43,13 @@ static void render_callback(Canvas* canvas, void* ctx) {
 
     if(stats->butthurt <= 4) {
         mood = 0;
-        snprintf(mood_str, 20, "Mood: Happy");
+        snprintf(mood_str, 20, "Mood: Squachy!");
     } else if(stats->butthurt <= 9) {
         mood = 1;
-        snprintf(mood_str, 20, "Mood: Ok");
+        snprintf(mood_str, 20, "Mood: Meh");
     } else {
         mood = 2;
-        snprintf(mood_str, 20, "Mood: Angry");
+        snprintf(mood_str, 20, "Mood: Heated");
     }
 
     uint32_t xp_progress = 0;
@@ -63,11 +63,7 @@ static void render_callback(Canvas* canvas, void* ctx) {
     }
 
     // multipass
-    canvas_draw_icon(canvas, 0, 0, &I_passport_left_6x46);
-    canvas_draw_icon(canvas, 0, 46, &I_passport_bottom_128x18);
-    canvas_draw_line(canvas, 6, 0, 125, 0);
-    canvas_draw_line(canvas, 127, 2, 127, 47);
-    canvas_draw_dot(canvas, 126, 1);
+    canvas_draw_icon(canvas, 0, 0, &I_passport_mountains);
 
     // portrait
     furi_assert((stats->level > 0) && (stats->level <= 3));
