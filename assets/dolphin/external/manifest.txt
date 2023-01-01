@@ -8,6 +8,13 @@ Min level: 1
 Max level: 3
 Weight: 8
 
+Name: WRENCH_Spinner
+Min butthurt: 0
+Max butthurt: 14
+Min level: 1
+Max level: 3
+Weight: 8
+
 Name: Kuronons_SasTV
 Min butthurt: 0
 Max butthurt: 14
