@@ -2,12 +2,15 @@
     <source media="(prefers-color-scheme: dark)" srcset="/.github/assets/dark_theme_banner.png">
     <source media="(prefers-color-scheme: light)" srcset="/.github/assets/light_theme_banner.png">
     <img
-        alt="SquachWare Community Firmware"
+        alt="SquachWare Community Firmware!"
         src="(https://user-images.githubusercontent.com/16942638/209824667-89df7a04-10e8-4db4-8fa7-be97afa0cbd4.jpg">
 </picture>
 
 # SquachWare Community Firmware
 This is just a placeholder while we get things started!!
+
+FULL DOCUMENTATION INCLUDING LINKS TO ALL AUTHORS WILL BE DONE SHORTLY.
+Right now I'm just getting the basics all sorted out!
 
 # Flipper Zero Firmware
 
