@@ -8,15 +8,11 @@ on:
     tags:
       - '*'
   pull_request:
-
-env:
-  TARGETS: f7
-  FBT_TOOLCHAIN_PATH: /runner/_work
-  SET_GH_OUTPUT: 1
+  workflow_dispatch:
 
 jobs:
   lint_c_cpp:
-    runs-on: [self-hosted,FlipperZeroShell]
+    runs-on: ubuntu-latest
     steps:
       - name: 'Decontaminate previous build leftovers'
         run: |
