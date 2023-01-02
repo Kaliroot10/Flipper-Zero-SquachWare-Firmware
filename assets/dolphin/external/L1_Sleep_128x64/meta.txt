@@ -16,7 +16,7 @@ Bubble slots: 2
 Slot: 0
 X: 53
 Y: 20
-Text: In a lucid dream,\nI could walk...
+Text: Wheres my \nBuddy Squach?
 AlignH: Left
 AlignV: Bottom
 StartFrame: 3
@@ -25,7 +25,7 @@ EndFrame: 9
 Slot: 1
 X: 53
 Y: 20
-Text: OH MY GOD!
+Text: Hope hes ok!
 AlignH: Left
 AlignV: Bottom
 StartFrame: 3
