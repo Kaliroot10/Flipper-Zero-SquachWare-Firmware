@@ -14,35 +14,8 @@
 #define DOLPHIN_STATE_PATH INT_PATH(DOLPHIN_STATE_FILE_NAME)
 #define DOLPHIN_STATE_HEADER_MAGIC 0xD0
 #define DOLPHIN_STATE_HEADER_VERSION 0x01
-#define LEVEL2_THRESHOLD 100
-#define LEVEL3_THRESHOLD 200
-#define LEVEL4_THRESHOLD 300
-#define LEVEL5_THRESHOLD 450
-#define LEVEL6_THRESHOLD 600
-#define LEVEL7_THRESHOLD 750
-#define LEVEL8_THRESHOLD 950
-#define LEVEL9_THRESHOLD 1150
-#define LEVEL10_THRESHOLD 1350
-#define LEVEL11_THRESHOLD 1600
-#define LEVEL12_THRESHOLD 1800
-#define LEVEL13_THRESHOLD 2000
-#define LEVEL14_THRESHOLD 2250
-#define LEVEL15_THRESHOLD 2500
-#define LEVEL16_THRESHOLD 2750
-#define LEVEL17_THRESHOLD 3050
-#define LEVEL18_THRESHOLD 3350
-#define LEVEL19_THRESHOLD 3650
-#define LEVEL20_THRESHOLD 4000
-#define LEVEL21_THRESHOLD 4350
-#define LEVEL22_THRESHOLD 4700
-#define LEVEL23_THRESHOLD 5100
-#define LEVEL24_THRESHOLD 5500
-#define LEVEL25_THRESHOLD 5900
-#define LEVEL26_THRESHOLD 6350
-#define LEVEL27_THRESHOLD 6800
-#define LEVEL28_THRESHOLD 7250
-#define LEVEL29_THRESHOLD 7550
-#define LEVEL30_THRESHOLD 8050
+#define LEVEL2_THRESHOLD 300
+#define LEVEL3_THRESHOLD 1800
 #define BUTTHURT_MAX 14
 #define BUTTHURT_MIN 0
 
@@ -107,21 +80,7 @@ uint64_t dolphin_state_timestamp() {
 }
 
 bool dolphin_state_is_levelup(uint32_t icounter) {
-    return (icounter == LEVEL2_THRESHOLD) || (icounter == LEVEL3_THRESHOLD) ||
-           (icounter == LEVEL4_THRESHOLD) || (icounter == LEVEL5_THRESHOLD) ||
-           (icounter == LEVEL6_THRESHOLD) || (icounter == LEVEL7_THRESHOLD) ||
-           (icounter == LEVEL8_THRESHOLD) || (icounter == LEVEL9_THRESHOLD) ||
-           (icounter == LEVEL10_THRESHOLD) || (icounter == LEVEL11_THRESHOLD) ||
-           (icounter == LEVEL12_THRESHOLD) || (icounter == LEVEL13_THRESHOLD) ||
-           (icounter == LEVEL14_THRESHOLD) || (icounter == LEVEL15_THRESHOLD) ||
-           (icounter == LEVEL16_THRESHOLD) || (icounter == LEVEL17_THRESHOLD) ||
-           (icounter == LEVEL18_THRESHOLD) || (icounter == LEVEL19_THRESHOLD) ||
-           (icounter == LEVEL20_THRESHOLD) || (icounter == LEVEL21_THRESHOLD) ||
-           (icounter == LEVEL22_THRESHOLD) || (icounter == LEVEL23_THRESHOLD) ||
-           (icounter == LEVEL24_THRESHOLD) || (icounter == LEVEL25_THRESHOLD) ||
-           (icounter == LEVEL26_THRESHOLD) || (icounter == LEVEL27_THRESHOLD) ||
-           (icounter == LEVEL28_THRESHOLD) || (icounter == LEVEL29_THRESHOLD) ||
-           (icounter == LEVEL30_THRESHOLD);
+    return (icounter == LEVEL2_THRESHOLD) || (icounter == LEVEL3_THRESHOLD);
 }
 
 uint8_t dolphin_get_level(uint32_t icounter) {
@@ -129,62 +88,8 @@ uint8_t dolphin_get_level(uint32_t icounter) {
         return 1;
     } else if(icounter <= LEVEL3_THRESHOLD) {
         return 2;
-    } else if(icounter <= LEVEL4_THRESHOLD) {
-        return 3;
-    } else if(icounter <= LEVEL5_THRESHOLD) {
-        return 4;
-    } else if(icounter <= LEVEL6_THRESHOLD) {
-        return 5;
-    } else if(icounter <= LEVEL7_THRESHOLD) {
-        return 6;
-    } else if(icounter <= LEVEL8_THRESHOLD) {
-        return 7;
-    } else if(icounter <= LEVEL9_THRESHOLD) {
-        return 8;
-    } else if(icounter <= LEVEL10_THRESHOLD) {
-        return 9;
-    } else if(icounter <= LEVEL11_THRESHOLD) {
-        return 10;
-    } else if(icounter <= LEVEL12_THRESHOLD) {
-        return 11;
-    } else if(icounter <= LEVEL13_THRESHOLD) {
-        return 12;
-    } else if(icounter <= LEVEL14_THRESHOLD) {
-        return 13;
-    } else if(icounter <= LEVEL15_THRESHOLD) {
-        return 14;
-    } else if(icounter <= LEVEL16_THRESHOLD) {
-        return 15;
-    } else if(icounter <= LEVEL17_THRESHOLD) {
-        return 16;
-    } else if(icounter <= LEVEL18_THRESHOLD) {
-        return 16;
-    } else if(icounter <= LEVEL19_THRESHOLD) {
-        return 18;
-    } else if(icounter <= LEVEL20_THRESHOLD) {
-        return 19;
-    } else if(icounter <= LEVEL21_THRESHOLD) {
-        return 20;
-    } else if(icounter <= LEVEL22_THRESHOLD) {
-        return 21;
-    } else if(icounter <= LEVEL23_THRESHOLD) {
-        return 22;
-    } else if(icounter <= LEVEL24_THRESHOLD) {
-        return 23;
-    } else if(icounter <= LEVEL25_THRESHOLD) {
-        return 24;
-    } else if(icounter <= LEVEL26_THRESHOLD) {
-        return 25;
-    } else if(icounter <= LEVEL27_THRESHOLD) {
-        return 26;
-    } else if(icounter <= LEVEL28_THRESHOLD) {
-        return 27;
-    } else if(icounter <= LEVEL29_THRESHOLD) {
-        return 28;
-    } else if(icounter <= LEVEL30_THRESHOLD) {
-        return 29;
     } else {
-        return 30;
+        return 3;
     }
 }
 
@@ -194,62 +99,8 @@ uint32_t dolphin_state_xp_above_last_levelup(uint32_t icounter) {
         threshold = 0;
     } else if(icounter <= LEVEL3_THRESHOLD) {
         threshold = LEVEL2_THRESHOLD + 1;
-    } else if(icounter <= LEVEL4_THRESHOLD) {
-        threshold = LEVEL3_THRESHOLD + 1;
-    } else if(icounter <= LEVEL5_THRESHOLD) {
-        threshold = LEVEL4_THRESHOLD + 1;
-    } else if(icounter <= LEVEL6_THRESHOLD) {
-        threshold = LEVEL5_THRESHOLD + 1;
-    } else if(icounter <= LEVEL7_THRESHOLD) {
-        threshold = LEVEL6_THRESHOLD + 1;
-    } else if(icounter <= LEVEL8_THRESHOLD) {
-        threshold = LEVEL7_THRESHOLD + 1;
-    } else if(icounter <= LEVEL9_THRESHOLD) {
-        threshold = LEVEL8_THRESHOLD + 1;
-    } else if(icounter <= LEVEL10_THRESHOLD) {
-        threshold = LEVEL9_THRESHOLD + 1;
-    } else if(icounter <= LEVEL11_THRESHOLD) {
-        threshold = LEVEL10_THRESHOLD + 1;
-    } else if(icounter <= LEVEL12_THRESHOLD) {
-        threshold = LEVEL11_THRESHOLD + 1;
-    } else if(icounter <= LEVEL13_THRESHOLD) {
-        threshold = LEVEL12_THRESHOLD + 1;
-    } else if(icounter <= LEVEL14_THRESHOLD) {
-        threshold = LEVEL13_THRESHOLD + 1;
-    } else if(icounter <= LEVEL15_THRESHOLD) {
-        threshold = LEVEL14_THRESHOLD + 1;
-    } else if(icounter <= LEVEL16_THRESHOLD) {
-        threshold = LEVEL15_THRESHOLD + 1;
-    } else if(icounter <= LEVEL17_THRESHOLD) {
-        threshold = LEVEL16_THRESHOLD + 1;
-    } else if(icounter <= LEVEL18_THRESHOLD) {
-        threshold = LEVEL17_THRESHOLD + 1;
-    } else if(icounter <= LEVEL19_THRESHOLD) {
-        threshold = LEVEL18_THRESHOLD + 1;
-    } else if(icounter <= LEVEL20_THRESHOLD) {
-        threshold = LEVEL19_THRESHOLD + 1;
-    } else if(icounter <= LEVEL21_THRESHOLD) {
-        threshold = LEVEL20_THRESHOLD + 1;
-    } else if(icounter <= LEVEL22_THRESHOLD) {
-        threshold = LEVEL21_THRESHOLD + 1;
-    } else if(icounter <= LEVEL23_THRESHOLD) {
-        threshold = LEVEL22_THRESHOLD + 1;
-    } else if(icounter <= LEVEL24_THRESHOLD) {
-        threshold = LEVEL23_THRESHOLD + 1;
-    } else if(icounter <= LEVEL25_THRESHOLD) {
-        threshold = LEVEL24_THRESHOLD + 1;
-    } else if(icounter <= LEVEL26_THRESHOLD) {
-        threshold = LEVEL25_THRESHOLD + 1;
-    } else if(icounter <= LEVEL27_THRESHOLD) {
-        threshold = LEVEL26_THRESHOLD + 1;
-    } else if(icounter <= LEVEL28_THRESHOLD) {
-        threshold = LEVEL27_THRESHOLD + 1;
-    } else if(icounter <= LEVEL29_THRESHOLD) {
-        threshold = LEVEL28_THRESHOLD + 1;
-    } else if(icounter <= LEVEL30_THRESHOLD) {
-        threshold = LEVEL29_THRESHOLD + 1;
     } else {
-        threshold = LEVEL30_THRESHOLD + 1;
+        threshold = LEVEL3_THRESHOLD + 1;
     }
     return icounter - threshold;
 }
@@ -260,60 +111,6 @@ uint32_t dolphin_state_xp_to_levelup(uint32_t icounter) {
         threshold = LEVEL2_THRESHOLD;
     } else if(icounter <= LEVEL3_THRESHOLD) {
         threshold = LEVEL3_THRESHOLD;
-    } else if(icounter <= LEVEL4_THRESHOLD) {
-        threshold = LEVEL4_THRESHOLD;
-    } else if(icounter <= LEVEL5_THRESHOLD) {
-        threshold = LEVEL5_THRESHOLD;
-    } else if(icounter <= LEVEL6_THRESHOLD) {
-        threshold = LEVEL6_THRESHOLD;
-    } else if(icounter <= LEVEL7_THRESHOLD) {
-        threshold = LEVEL7_THRESHOLD;
-    } else if(icounter <= LEVEL8_THRESHOLD) {
-        threshold = LEVEL8_THRESHOLD;
-    } else if(icounter <= LEVEL9_THRESHOLD) {
-        threshold = LEVEL9_THRESHOLD;
-    } else if(icounter <= LEVEL10_THRESHOLD) {
-        threshold = LEVEL10_THRESHOLD;
-    } else if(icounter <= LEVEL11_THRESHOLD) {
-        threshold = LEVEL11_THRESHOLD;
-    } else if(icounter <= LEVEL12_THRESHOLD) {
-        threshold = LEVEL12_THRESHOLD;
-    } else if(icounter <= LEVEL13_THRESHOLD) {
-        threshold = LEVEL13_THRESHOLD;
-    } else if(icounter <= LEVEL14_THRESHOLD) {
-        threshold = LEVEL14_THRESHOLD;
-    } else if(icounter <= LEVEL15_THRESHOLD) {
-        threshold = LEVEL15_THRESHOLD;
-    } else if(icounter <= LEVEL16_THRESHOLD) {
-        threshold = LEVEL16_THRESHOLD;
-    } else if(icounter <= LEVEL17_THRESHOLD) {
-        threshold = LEVEL17_THRESHOLD;
-    } else if(icounter <= LEVEL18_THRESHOLD) {
-        threshold = LEVEL18_THRESHOLD;
-    } else if(icounter <= LEVEL19_THRESHOLD) {
-        threshold = LEVEL19_THRESHOLD;
-    } else if(icounter <= LEVEL20_THRESHOLD) {
-        threshold = LEVEL20_THRESHOLD;
-    } else if(icounter <= LEVEL21_THRESHOLD) {
-        threshold = LEVEL21_THRESHOLD;
-    } else if(icounter <= LEVEL22_THRESHOLD) {
-        threshold = LEVEL22_THRESHOLD;
-    } else if(icounter <= LEVEL23_THRESHOLD) {
-        threshold = LEVEL23_THRESHOLD;
-    } else if(icounter <= LEVEL24_THRESHOLD) {
-        threshold = LEVEL24_THRESHOLD;
-    } else if(icounter <= LEVEL25_THRESHOLD) {
-        threshold = LEVEL25_THRESHOLD;
-    } else if(icounter <= LEVEL26_THRESHOLD) {
-        threshold = LEVEL26_THRESHOLD;
-    } else if(icounter <= LEVEL27_THRESHOLD) {
-        threshold = LEVEL27_THRESHOLD;
-    } else if(icounter <= LEVEL28_THRESHOLD) {
-        threshold = LEVEL28_THRESHOLD;
-    } else if(icounter <= LEVEL29_THRESHOLD) {
-        threshold = LEVEL29_THRESHOLD;
-    } else if(icounter <= LEVEL30_THRESHOLD) {
-        threshold = LEVEL30_THRESHOLD;
     } else {
         threshold = (uint32_t)-1;
     }
