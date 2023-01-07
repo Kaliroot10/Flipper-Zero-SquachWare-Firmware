@@ -6,6 +6,7 @@
 #include <gui/gui.h>
 #include <furi_hal_version.h>
 #include "dolphin/dolphin.h"
+#include "../desktop_settings/desktop_settings_app.h"
 #include "math.h"
 
 #define MOODS_TOTAL 3
@@ -37,6 +38,7 @@ static void input_callback(InputEvent* input, void* ctx) {
 static void render_callback(Canvas* canvas, void* ctx) {
     DolphinStats* stats = ctx;
 
+	const char* my_name = furi_hal_version_get_name_ptr();
     char level_str[20];
     char xp_str[12];
     char mood_str[32];
@@ -69,9 +71,19 @@ static void render_callback(Canvas* canvas, void* ctx) {
 
     // portrait
     furi_assert((stats->level > 0) && (stats->level <= 3));
-    canvas_draw_icon(canvas, 11, 2, portraits[mood][stats->level - 1]);
+    
+    // Change Passport Image Based on Name
 
-    const char* my_name = furi_hal_version_get_name_ptr();
+    if(strcmp(my_name,"Kuro") == 0)
+	{
+    canvas_draw_icon(canvas, 11, 2, &I_kuro);
+	}
+	else
+	{
+    canvas_draw_icon(canvas, 11, 2, portraits[mood][stats->level - 1]);
+    }
+
+
     // LEVEL DISPLAY
     snprintf(level_str, 20, "Level: %hu", stats->level);
     // XP / XP DISPLAY
