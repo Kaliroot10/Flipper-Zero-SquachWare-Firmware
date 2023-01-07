@@ -127,6 +127,10 @@ FuriHalVersionDisplay furi_hal_version_get_hw_display();
  */
 uint32_t furi_hal_version_get_hw_timestamp();
 
+/** Adding Name Changer Functionality (SQUACHWARE) **/
+
+void furi_hal_version_set_custom_name(const char* name);
+
 /** Get pointer to target name
  *
  * @return     Hardware Name C-string
