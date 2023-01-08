@@ -38,7 +38,9 @@ static void input_callback(InputEvent* input, void* ctx) {
 static void render_callback(Canvas* canvas, void* ctx) {
     DolphinStats* stats = ctx;
 
+// SquachWare add my_name var
 	const char* my_name = furi_hal_version_get_name_ptr();
+
     char level_str[20];
     char xp_str[12];
     char mood_str[32];
