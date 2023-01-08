@@ -26,7 +26,7 @@ void animation_manifest_set()
 {
 	const char* my_name = furi_hal_version_get_name_ptr();
 
-	if(strcmp(my_name,"PenAce") == 0)
+	if(strcmp(my_name,"Kuro") == 0)
 	{
 		snprintf(ANIMATION_MANIFEST_FILE, sizeof(ANIMATION_DIR), "%s", ANIMATION_DIR);
 		strcat(ANIMATION_MANIFEST_FILE,"/manifest2.txt");

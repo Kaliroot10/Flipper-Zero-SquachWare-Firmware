@@ -14,7 +14,7 @@ DEBUG = 1
 
 # Suffix to add to files when building distribution
 # If OS environment has DIST_SUFFIX set, it will be used instead
-DIST_SUFFIX = "SquachWare-PenAce"
+DIST_SUFFIX = "SquachWare"
 
 # Coprocessor firmware
 COPRO_OB_DATA = "scripts/ob.data"

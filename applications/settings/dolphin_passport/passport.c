@@ -69,9 +69,9 @@ static void render_callback(Canvas* canvas, void* ctx) {
     }
 
     // multipass
-    if(strcmp(my_name,"PenAce") == 0)
+    if(strcmp(my_name,"Kuro") == 0)
 	{
-    canvas_draw_icon(canvas, 0, 0, &I_passport_penace);	
+    canvas_draw_icon(canvas, 0, 0, &I_passport_Multipass);	
     }
 	else
 	{
@@ -84,9 +84,9 @@ static void render_callback(Canvas* canvas, void* ctx) {
     
     // Squachware Change Passport Image Based on Name
 
-    if(strcmp(my_name,"PenAce") == 0)
+    if(strcmp(my_name,"Kuro") == 0)
 	{
-    canvas_draw_icon(canvas, 11, 2, &I_penace);
+    canvas_draw_icon(canvas, 11, 2, &I_kuro);
 	}
 	else
 	{
