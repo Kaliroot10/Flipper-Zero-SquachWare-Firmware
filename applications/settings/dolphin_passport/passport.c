@@ -69,12 +69,20 @@ static void render_callback(Canvas* canvas, void* ctx) {
     }
 
     // multipass
-    canvas_draw_icon(canvas, 0, 0, &I_passport_Mountains);
+    if(strcmp(my_name,"Kuro") == 0)
+	{
+    canvas_draw_icon(canvas, 0, 0, &I_passport_Multipass);	
+    }
+	else
+	{
+    canvas_draw_icon(canvas, 0, 0, &I_passport_Mountains);	
+    }
+
 
     // portrait
     furi_assert((stats->level > 0) && (stats->level <= 3));
     
-    // Change Passport Image Based on Name
+    // Squachware Change Passport Image Based on Name
 
     if(strcmp(my_name,"Kuro") == 0)
 	{
