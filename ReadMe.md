@@ -24,12 +24,8 @@ Download Zip (or tgz) file from the Releases link https://github.com/skizzophren
 
 If you'd like to contribute to this project, the best way to start would be to join the Squachtopia Hangout Discord server! https://discord.gg/squachtopia
 
-## I need help
 
-The best place to search for answers is our [User Documentation](https://docs.flipperzero.one). If you can't find the answer there, you can check our [Discord Server](https://flipp.dev/discord) or our [Forum](https://forum.flipperzero.one/).
-
-
-Supported development platforms:
+# Supported development platforms:
 
 - Windows 10+ with PowerShell and Git (x86_64)
 - macOS 12+ with Command Line tools (x86_64, arm64)
