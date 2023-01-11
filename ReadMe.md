@@ -12,13 +12,13 @@ Just watch this video : https://youtu.be/A1SuDfFjUho
 Follow the same instructions as far as installing RogueMaster:
 
 Download Zip (or tgz) file from the Releases link https://github.com/skizzophrenic/SquachWare-CFW/releases/
--Extract the compressed file into a folder
--Drag that folder into the Update folder on your Flipper Zero (If you don't have one, just create a folder named Update)
--On your Flipper, press down then left to access the browser
--Navigate to Update
--Find the folder that you just dropped into the Update folder and open it
--Find the file named Update and run it
--Wait for it to install and you're done!
+- Extract the compressed file into a folder
+- Drag that folder into the Update folder on your Flipper Zero (If you don't have one, just create a folder named Update)
+- On your Flipper, press down then left to access the browser
+- Navigate to Update
+- Find the folder that you just dropped into the Update folder and open it
+- Find the file named Update and run it
+- Wait for it to install and you're done!
 
 # Contributing
 
