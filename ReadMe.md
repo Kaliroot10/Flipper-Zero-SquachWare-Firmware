@@ -7,11 +7,18 @@ SquachWare is a community driven firmware!  Our goal is to creat a firmware that
 FULL DOCUMENTATION INCLUDING LINKS TO ALL AUTHORS WILL BE DONE SHORTLY.
 Right now I'm just getting the basics all sorted out!
 
-# Flipper Zero Firmware
+# How to Install
+Just watch this video : https://youtu.be/A1SuDfFjUho
+Follow the same instructions as far as installing RogueMaster:
 
-- [Flipper Zero Official Website](https://flipperzero.one). A simple way to explain to your friends what the Flipper Zero can do
-- [Flipper Zero Firmware Update](https://update.flipperzero.one). Improvements for your dolphin: latest firmware releases, upgrade tools for PC and Mobile devices
-- [User Documentation](https://docs.flipperzero.one). Learn more about your dolphin: specs, usage guides, and everything that you wanted to ask
+Download Zip (or tgz) file from the Releases link https://github.com/skizzophrenic/SquachWare-CFW/releases/
+-Extract the compressed file into a folder
+-Drag that folder into the Update folder on your Flipper Zero (If you don't have one, just create a folder named Update)
+-On your Flipper, press down then left to access the browser
+-Navigate to Update
+-Find the folder that you just dropped into the Update folder and open it
+-Find the file named Update and run it
+-Wait for it to install and you're done!
 
 # Contributing
 
